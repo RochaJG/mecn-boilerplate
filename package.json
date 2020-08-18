@@ -5,7 +5,26 @@
   "repository": "https://github.com/RochaJG/mejn-boilerplate.git",
   "author": "Jordan Rocha <70rd23@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier --check **/*.js",
+    "prettier:fix": "prettier --write **/*.js"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^23.0.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-security": "^1.4.0",
+    "nodemon": "^2.0.0",
+    "prettier": "^2.0.5"
   }
 }

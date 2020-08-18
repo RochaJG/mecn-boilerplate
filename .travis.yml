@@ -6,4 +6,5 @@ branches:
   - develop
   - master
 script:
+  - yarn lint
   - yarn start
