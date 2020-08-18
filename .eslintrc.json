@@ -8,9 +8,20 @@
     "ecmaVersion": 2018
   },
   "rules": {
+    "no-console": "error",
     "func-names": "off",
     "no-underscore-dangle": "off",
     "consistent-return": "off",
     "security/detect-object-injection": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": [
+        ["@root", "./src"],
+        ["@app", "./src/app"],
+        ["@config", "./src/config"],
+        ["@libs", "./src/libs"]
+      ]
+    }
   }
 }
