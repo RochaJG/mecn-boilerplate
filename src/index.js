@@ -1,6 +1,7 @@
-const app = require('./app');
-const config = require('./config');
-const { logger } = require('./libs');
+require('module-alias/register');
+const app = require('@app');
+const config = require('@config');
+const { logger } = require('@libs');
 
 app.listen(config.port, () => {
   logger.info(`Server listening to port ${config.port}`);
