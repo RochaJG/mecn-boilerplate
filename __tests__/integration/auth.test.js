@@ -17,7 +17,7 @@ describe('Auth routes', () => {
     test('Should return 201 and successfully register user if data is ok', async () => {
       const response = await request(app).post('/v1/auth/register').send(newUser).expect(httpStatus.CREATED);
 
-      const user = response.body.user;
+      const { user } = response.body;
       expect(user).not.toHaveProperty('password');
       expect(user).toEqual({ id: expect.anything(), name: newUser.name, email: newUser.email, role: 'user' });
     });
