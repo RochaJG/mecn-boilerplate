@@ -7,4 +7,5 @@ branches:
   - master
 script:
   - yarn lint
-  - yarn start
+  - yarn test
+after_success: yarn coverage:coveralls
